@@ -1,5 +1,5 @@
 # acme-employees
-This program will get information of ACME's employees worked schedules and output a table containing how many times a pair of employees have coincided in office.
+This program will get information of ACME's employees worked schedules and output a table containing how many times a pair of employees have coincided in office. I used Python for this exercise.
 
 # Modules used in this program
   - sys: to get the name of the file cointaining the schedules from the commmand line.
@@ -35,4 +35,15 @@ Input: the name of an employee and the schedule they worked, indicating the time
   OUTPUT:
   RENE-ASTRID: 3
 
-#
+# Files in the repository
+- main.py: the main program. This program will take a command line argument to output the tables. Scroll down to find the instructions to run it.
+- acme_test.py: the unit tests for the main program. I used Python's unittest for it. 
+- employees.txt: text file containing the employees info for example #1.
+- employees1.txt: text file containing the employees info for example #2.
+
+# How to run the program
+This is a command line program. Download the main.py file and save it in the same folder as the employees data files. You can download employees and employees1 for testing, and the file for test itself. Once you have the main.py in the same folder as your data, open a command line in that folder and run:
+  - python main.py (NAME OF THE FILE WITH THE DATA.txt)
+  
+  E.G:
+  - python main.py employees.txt
