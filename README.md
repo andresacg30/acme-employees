@@ -73,5 +73,6 @@ The first thing to do when working with data is clean it. So, the program first 
 
 After having the employees dict, we could get each employees name from the keys. That's when make_combinations() takes action. It will take every employees name and make all possible combinations of pair of the employees dict. It returns a list containing the combinations.
 
-Now we want to compare the schedules of every combinations. For this, I created the funcion choose_pair(), which will extract the information of the pair of employees from the employees dict. It returns a new dict only with the information of that pair.
+Now we want to compare the schedules of every combinations. For this, I created the funcion choose_pair(), which will extract the information of the pair of employees from the employees dict. This action is done by turning the lists with the employees' names (chosen combination and all employees) into a set, and finding their intersection. It returns a new dict only with the information of that pair.
 
+For easier comparison purposes, I decided to turn the information in a 2D Matrix in which we have the employees name as columns and their info as a row. This action is done with the make_matrix() function, and then the rows' info are turned into a dict WEEKDAY: HOURS with the prepare_time() function.
