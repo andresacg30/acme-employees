@@ -69,7 +69,7 @@ To get the desired result we need to compare the times worked by all the possibl
     
 # My approach
 
-The first thing to do when working with data is clean it. So, the program first gets the name of the file with -get_data()-, which is the name parsed in the command line argument. Then, it reads the file safely, creates a list without the line splits and without white spaces. Erasing this symbol is just a security approach to any wrong whitespaces that could be in the data (check example #1 - RENE - SUNDAY). Finally, it creates a dict with the name of the employee as key and his schedule as value. E.G: {"ASTRID": "MO10:00-12:00,TH12:00-14:00,SU20:00-21:00"), we will reffer this list as employees list from now.
+The first thing to do when working with data is clean it. So, the program first gets the name of the file with get_data(), which is the name parsed in the command line argument. Then, it reads the file safely, creates a list without the line splits and without white spaces. Erasing this symbol is just a security approach to any wrong whitespaces that could be in the data (check example #1 - RENE - SUNDAY). Finally, it creates a dict with the name of the employee as key and his schedule as value. E.G: {"ASTRID": "MO10:00-12:00,TH12:00-14:00,SU20:00-21:00"), we will reffer this list as employees list from now.
 
 After having the employees dict, we could get each employees name from the keys. That's when make_combinations() takes action. It will take every employees name and make all possible combinations of pair of the employees dict. It returns a list containing the combinations.
 
