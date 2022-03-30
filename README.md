@@ -46,10 +46,10 @@ Input: the name of an employee and the schedule they worked, indicating the time
 
 This is a command line program. Download the main.py file and save it in the same folder as the employees data files. You can download employees and employees1 for testing, and the file for test itself. Once you have the main.py in the same folder as your data, open a command line in that folder and run:
 
-  - python main.py (NAME OF THE FILE WITH THE DATA.txt)
-  
-  E.G:
-  - python main.py employees.txt
+    - python main.py (NAME OF THE FILE WITH THE DATA.txt)
+    
+    E.G:
+    - python main.py employees.txt
 
 # Program logic
 
@@ -75,4 +75,11 @@ After having the employees dict, we could get each employees name from the keys.
 
 Now we want to compare the schedules of every combinations. For this, I created the funcion choose_pair(), which will extract the information of the pair of employees from the employees dict. This action is done by turning the lists with the employees' names (chosen combination and all employees) into a set, and finding their intersection. It returns a new dict only with the information of that pair.
 
-For easier comparison purposes, I decided to turn the information in a 2D Matrix in which we have the employees name as columns and their info as a row. This action is done with the make_matrix() function, and then the rows' info are turned into a dict WEEKDAY: HOURS with the prepare_time() function.
+For easier comparison purposes, I decided to turn the information in a 2D Matrix in which we have the employees name as columns and their info as a row. The worked hours info that is needed in this step is for a specific weekday. This action is done with the make_matrix() function, and then the rows' info are turned into a dict WEEKDAY: HOURS with the prepare_time() function.
+
+The last function of the program implements the logic described before. The find_coincidences() function takes each hour and turns it into a datetime.time object. It divides them into "Start time" and "End time" and apply the logic with a boolean operation described in the logic of the program. If the comparisson is True, it increase a counter's value. After doing all the operations it returns the times the pair of employees coincided in office. This is function does its operation for a weekday and a pair of employees.
+
+Now with all the functions defined, the program runs with the main() function. It holds a list with the weekdays, with the format previously defined by the data, wich is two digits: "MO", "TU", "WE" etc. The program iterates over every pair of employees' combination, makes the matrix for that combination and then iterates over each weekday. Then, the program applies the find_coincidences() function only to those matrix with more than one employee (We only need the weekdays that more than one employee worked). The program returns the pair of employees and the sum of the times they coincided in the office over the week in the following format:
+
+    - EMPLOYEE1-EMPLOYEE2: N
+    N is a integer that represents the total time this pair of employees coincided in the office.
