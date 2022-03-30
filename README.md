@@ -44,7 +44,7 @@ Input: the name of an employee and the schedule they worked, indicating the time
 
 # How to run the program
 
-This is a command line program. Download the main.py file and save it in the same folder as the employees data files. You can download employees and employees1 for testing, and the file for test itself. Once you have the main.py in the same folder as your data, open a command line in that folder and run:
+This is a command line program. Download the files and save your files with the data in the same program's folder. You can use employees and employees1 for test the program, or use the acme_test.py which tests the units of the program. Open a command line in that folder and run:
 
     - python main.py (NAME OF THE FILE WITH THE DATA.txt)
     
