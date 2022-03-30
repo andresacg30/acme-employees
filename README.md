@@ -53,7 +53,7 @@ This is a command line program. Download the main.py file and save it in the sam
 
 # Program logic
 
-To get the desired result we need to compare the times worked by all the possible combinations of two employees. We compare the worked schedule on each weekday and combination and count how many times some employee was working in the time range of other employee. When we have the worked schedule, we can split it in "START TIME" and "END TIME". To know if the time range of an employee falls in the time range of another, we could say that:
+To get the desired result we need to compare the times worked by all the possible combinations of two employees. We compare the worked schedule on each weekday and combination and count how many times some employee was working in the time range of other employee in the whole week. When we have the worked schedule, we can split it in "START TIME" and "END TIME". To know if the time range of an employee falls in the time range of another, we could say that:
 
   - IF the start time of the employee X is GREATER OR EQUAL than the start time of the employee Y, AND the end time of X employee is LESS OR EQUAL than the end time of the employee Y, then they coincided in the office.
 
